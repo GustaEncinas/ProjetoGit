@@ -1,0 +1,203 @@
+<!--declaração pro navegador, de que se trata de uma pagina em html-->
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+    <head>
+ 
+        <title>Aprendendo sobre tags</title>
+            <!--tag style serve para mudar as cores de sua pagina
+        ela é declarada com "body{}" dentro de body, se insere
+        as cores das letras "color:" nome em ingles, cod RGB ou exadecimal
+        as cores do plano de fundo, no mesmo modelo usando "background-color" -->
+        <style>
+            body{
+                color: #4B0082;
+                background-color: pink;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <p>
+            HTML (Hypertext Markup Language ou na tradução para o português 
+            Linguagem de Marcação de Hipertexto) é uma linguagem utilizada 
+            para construção de páginas de Internet. HTML define um conjunto de regras
+            que permite a formatação de páginas. Um documento HTML consiste em um arquivo de texto que será lido e interpretado
+            como uma página por  browsers (navegadores), como por exemplo,
+            Chrome, Firefox, Opera, Edge ou Safari.
+        </p>
+
+        <!--sem o uso de tags, fica tudo na mesma linha-->
+        Olá, mundo 
+        paragrafo
+        <!--já a tag <br> força a quebra de linha-->
+        <br>
+        Olá, mundo<br> 
+        paragrafo
+        <!--<p>:tag que signica paragrafo/espaçamento-->
+        <p>Olá, mundo!</p>
+        <p>paragrafo</p>
+        
+        <!--hr cria uma linha horizontal entre duas linhas-->
+        olá, mundo
+        <hr>
+        paragrafo
+
+        <!--tag h1, h2, h3, h4 crian titulos com tamanhos diferentes, todos em negrito-->
+        <h1>titulo</h1>
+        <h2>titulo</h2>
+        <h3>titulo</h3>
+        <h4>titulo</h4>
+        <h5>titulo</h5>
+        <h6>titulo</h6>
+
+        <p>titulo - normal</p>
+        <p>
+            <b>Texto em negrito</b><br>
+            <i>Texto em itálico</i><br>
+            <u>Texto sublinhado</u><br>
+            <sub>Texto subscrito</sub><br>
+            <sup>Texto sobrescrito</sup><br>
+            <big>Texto com fonte maior do que o padrão</big><br>
+            <small>Texto com fonte menor do que o padrão</small><br>
+            <em>Texto em itálico</em><br>
+            <strong>Texto em negrito</strong>
+        </p>
+        <p style="font-family: 'Times New Roman'">Olá, mundo!</p>
+        <p style="font-family: 'Arial'">Olá, mundo</p>
+        <br>
+        <br>
+        <h2>Aprendedo a colocar imagens</h2>
+        <!-- a tag img seguinda de um atributo src (atributo de fonte)
+        seguida do nome da imagem e sua estensão(montanha.jpeg) 
+        obs: imagem deve estar no mesmo diretorio da pag html
+        width serve para alterar o tamanho-->
+        <img src="mont.jpeg" width="300">
+
+        
+        <br>
+        </br>
+        <h2>Aprendendo a colcoar listas</h2>
+        <!--lista ordenada de elementos com <ol>
+            lista não ordenada de elemento com <ul>
+                <il> para inserir os elementos
+            linha horizontal que copbre a pag com <hr>-->
+        <hr>
+        <ol>
+            <li>Primeiro da lista</li>
+            <li>Segundo da lista</li>
+            <li>Terceiro da lista</li>
+        </ol>
+        <hr>
+        <hr>
+        <ul>
+            <li>Primeiro da lista</li>
+            <li>Segundo da lista</li>
+            <li>Terceiro da lista</li>
+        </ul>
+        <hr>
+        
+        <br>
+        </br>
+        <h2>Aprendedo a colocar link</h2>
+        <!--tag a seguida do atributo href, 
+            seguido do valor para qual o link aponte("http://..."), 
+            seguido informação para exibir(Google)-->
+        <a href="http://google.com.br">Google</a>
+        <p> link acima na formatação padrão: cor azul e sublinhado</p>
+
+        <!--link para uma pagina minha, criada com html-->
+        <a href="pagina2.html">link para pagina2</a>
+        <br>
+        </br>
+        <h2>Aprendendo a colocar tabelas</h2>
+        <!--tag <table> para criar tabela
+            cada linha da tabela declarada com <tr>
+            cada cedula da tabela declarada com <td>
+            <th> para linha de cabeçalho-->
+        <table>
+            <tr> 
+                <th>batata</th> 
+                <th>frita</th> 
+                <th>empanada</th>
+            </tr>
+            <tr>  
+                <td>quijo</td> 
+                <td>oleo</td>
+                <td>farinha</td>  
+            </tr>
+            <tr>  
+                <td>carne</td> 
+                <td>assada</td> 
+                <td>cuscuz</td>
+            </tr>
+        </table>
+
+        <br>
+        </br>
+        fora da div
+        <div>
+            <p>Conteúdo de uma div</p>
+        </div>
+        fora da div
+        <br>
+
+    </body>
+        <h2>Aprendedo sobre formularios</h2>
+
+        <!--fromularios são para interagir com o sistema, enviado para
+            uma pagina ou banco de dados.
+        deve ser declado a partir da tag form, e requer o atributo
+        action, no caso "processa.php" o que for afirmado no formulario
+        vai para o banco de dados dentro de "processa.php"-->
+        <form action="processa.php" method="post"></form>
+            <!--tag input recebe um tipo, nome, valor(não obrigatorio)
+                pode recer tambem um placeholder(algo escrito
+                dentro do seu input) -->
+
+            <!--label é "titulo" do seu input, dentro da pagina-->
+            <lable>Text</lable>
+            <input type="text" name="texto1" placeholder="Eu sou um input do tipo text">
+
+            <br></br>
+            
+            <label>Password</label>
+            <input type="password" name="senha">
+
+            <br></br>
+
+            <label>Oculto</label>
+            <input type="hidden" name="informacao_oculta" value="mensagem oculta">
+
+            <br></br>
+            
+            <!--os select dentro do formulario, serve para
+            dar opções de escolha do usuario-->
+            <label>Select</label>
+            <select name="selecao">
+                <option value="1">Opção 1</option>
+                <option value="2">Opção 2</option>
+                <option value="3">Melhor opção</option>
+            </select>
+            
+            <br></br>
+            
+            <!--radio para respostas objetivas e unicas em um formulario-->
+            <label>Radio</label><br>
+            <input type="radio" name="radio1" value="1">valor 1<br>
+            <input type="radio" name="radio1" value="2">valor 2
+
+            <br></br>
+
+            <!--checkbox para varias opçãoes de resposta-->
+            <label>checkbox</label><br>
+            <input type="checkbox" name="ck1" value="1">valor1 <br>
+            <input type="checkbox" name="ck1" value="1">valor2 <br>
+            <input type="checkbox" name="ck1" value="1">valor3 <br>
+            <br>
+            
+            <!--botão de enviar, manda as respostas do formualrio
+            para o "processa.php" declarado no inicio-->
+            <input type="submit" value="Enviar" name="submit">
+            gustavo fernandes
+</html>
